@@ -9,14 +9,35 @@ body {
     background-color: #222222;
     color: #fff;
     min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.banner-image {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    display: block;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem 4rem;
+    background-color: rgba(34, 34, 34, 0.8);
     position: fixed;
     width: 100%;
     top: 0;
@@ -41,59 +62,6 @@ body {
     margin: 0 0.5rem;
 }
 
-.home-content {
-    padding: 6rem 2rem 2rem;
-    max-width: 1800px;
-    margin: 0 auto;
-}
-
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 3659/5250;
-    background-color: #111;
-    border-radius: 4px;
-    max-width: 3659px;
-    margin: 0 auto;
-}
-
-/* All images will now use the same base styling */
-.gallery-image1,
-.gallery-image4 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.gallery-image2 {
-    width: 80%;
-    height: 80%;
-    margin-top: 30%;
-    object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.gallery-image3 {
-    width: 80%;
-    height: 80%;
-    margin-left: -170px;
-    object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.gallery-item:hover .gallery-image {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -105,14 +73,5 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .image-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
-    }
-
-    .home-content {
-        padding-top: 8rem;
     }
 } 
