@@ -87,9 +87,10 @@ body {
     border-radius: 8px;
     padding: 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
     margin-bottom: 3rem;
+    align-items: start;
 }
 
 .project-info {
@@ -134,13 +135,30 @@ body {
     border-radius: 4px;
 }
 
+.project-images.single-image {
+    display: block;
+    grid-template-columns: 1fr;
+}
+
+.project-images.single-image .full-width-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    max-height: 800px;
+}
+
 @media (max-width: 1024px) {
     .project-card {
         grid-template-columns: 1fr;
     }
     
-    .project-images {
+    .project-images.single-image {
         order: -1;
+    }
+    
+    .project-images.single-image .full-width-image {
+        max-height: 600px;
     }
 }
 
