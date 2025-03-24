@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automotive Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="banner">
@@ -24,5 +25,32 @@
             <a href="#">SOCIAL MEDIA</a>
         </div>
     </nav>
+
+    <div class="home-gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="600">
+                <img src="Images/BOXER.jpg" alt="Porsche Boxer" class="gallery-image">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                <img src="Images/BESTE AV DEN GÅ BILEN.jpg" alt="Gray Car Detail" class="gallery-image">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                <img src="Images/911 Turbo S FS copy.jpg" alt="911 Turbo S" class="gallery-image">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+                <img src="Images/Gul Bil redigert.jpg" alt="Yellow Car" class="gallery-image">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+            once: true,
+            offset: 50,
+            easing: 'ease-out'
+        });
+    </script>
 </body>
 </html> 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Automotive Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <nav class="navbar">
@@ -22,18 +23,27 @@
     </nav>
 
     <main class="projects-content">
-        <div class="project-card">
-            <div class="project-info">
+        <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+            <div class="project-info" data-aos="fade-right" data-aos-delay="200">
                 <h2>Creative Design</h2>
                 <h3>With Porsche Asker & Bærum</h3>
                 <p>The project was about taking pictures and making a design for a magazine.</p>
                 <p>We made a A3 sized paper to make a 4 page magazine.</p>
                 <p class="software-used">Software used: InDesign, Photo Shop, Light Room Classic</p>
             </div>
-            <div class="project-images single-image">
+            <div class="project-images single-image" data-aos="fade-left" data-aos-delay="400">
                 <img src="Images/Porche indesign.png" alt="Porsche InDesign Project" class="full-width-image">
             </div>
         </div>
     </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html> 
