@@ -52,6 +52,12 @@ body {
     transition: color 0.3s ease;
 }
 
+.nav-links a.active, .nav-right a.active {
+    color: #FFD700; /* Gold color for active tab */
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700;
+}
+
 .nav-links a:hover, .nav-right a:hover {
     color: #888;
 }
